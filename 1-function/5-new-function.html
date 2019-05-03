@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // создание функции через new
+    var sum = new Function('a,b', ' return a+b; ');
+
+
+    // var sum = function(a, b) {
+    //         return a + b;
+    //     };
+    alert(sum);
+
+
+    var result = sum(1, 2);
+    alert( result ); // 3
+</script>
+</body>
+</html>

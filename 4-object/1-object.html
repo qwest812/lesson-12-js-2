@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var user = new Object(); // (1)
+    // var user = {}; // пустые фигурные скобки
+    user.name = "Iaroslav";
+    user.age = 27;
+    console.log(user);
+    console.log(user.name);
+    console.log(user.age);
+    delete user.age;
+    console.log(user);
+    if ("age" in user) {
+        alert( "Свойство age существует!" );
+    }else {
+        alert( "Свойство age было удалено!")
+    }
+    alert(user['age']);
+</script>
+</body>
+</html>

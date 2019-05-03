@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arguments</title>
+</head>
+<body>
+<script>
+    function sayHi(name) {
+        console.log(arguments);
+        for (var i = 0; i < arguments.length; i++) {
+            console.log( "Привет, " + arguments[i] );
+        }
+    }
+
+    sayHi("Винни", "Пятачок"); // 'Привет, Винни', 'Привет, Пятачо
+    var arr =[1,2,3,4];
+    console.log(arr);
+
+
+    function sum() {
+        var mySum=0;
+        console.log(arguments);
+        for (var i = 0; i < arguments.length; i++) {
+i=1;
+            mySum=arguments[i]+mySum;
+        }
+        console.log(mySum);
+    }
+    sum(1,2,3,4,353346,346,346,347);
+</script>
+</body>
+</html>

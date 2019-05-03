@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol</title>
+</head>
+<body>
+<script>
+    // var sym1 = Symbol();
+    // var sym2 = Symbol("foo");
+    // var sym3 = Symbol("foo");
+
+    // Symbol("foo") === Symbol("foo"); // false
+
+    // иногда  символ нужно представить как обьект
+
+    var sym = new Symbol(); // TypeError
+
+    var sym = Symbol("foo");
+    typeof sym;     // "symbol"
+    var symObj = Object(sym);
+    typeof symObj;  // "object"
+
+
+
+    var obj = {};
+
+    obj[Symbol("a")] = "a";
+    obj[Symbol.for("b")] = "b";
+    obj["c"] = "c";
+    obj.d = "d";
+
+    for (var i in obj) {
+        console.log(i); // выведет "c" и "d"
+        // глабальны символы
+        const sym =Symbol.for("My symbol");
+        // Symbol.for("My symbol")== "My symbol"  //true
+    }</script>
+</body>
+</html>

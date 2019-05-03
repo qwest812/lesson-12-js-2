@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>every some</title>
+</head>
+<body>
+<script>
+    var arr = [1, -1, 2, -2, 3];
+
+    function isPositive(number) {
+        return number > 0;
+    }
+
+    alert( arr.every(isPositive) ); // false, не все положительные
+    alert( arr.some(isPositive) ); // true, есть хоть одно положительное
+</script>
+</body>
+</html>
